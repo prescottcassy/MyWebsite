@@ -238,15 +238,26 @@ header {
 }
 
 /* Into Section */
-
+/* Modern Hero Enhancements */
 .intro {
-    position: relative;
-
+    animation: fadeIn 1s ease forwards;
 }
 
 .intro__img {
-    box-shadow: var(--bs);
+    border-radius: 12px;
+    transition: transform 400ms ease, box-shadow 400ms ease;
 }
+
+.intro__img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 
 .section__subtitle--intro {
     display: inline-block;
