@@ -414,15 +414,21 @@ header {
 
 }
 
+/* Modern Portfolio Hover */
 .portfolio__item {
-    background: var(--clr-accent);
+    border-radius: 10px;
     overflow: hidden;
+    position: relative;
 }
 
 .portfolio-img {
-    width: 500;
-    transition:  transform 750ms cubic-bezier(.5, 0, .5, 1),
-        opacity 250ms linear;
+    border-radius: 10px;
+    transition: transform 600ms ease, filter 300ms ease;
+}
+
+.portfolio__item:hover .portfolio-img {
+    transform: scale(1.15);
+    filter: brightness(0.75);
 }
 
 .portfolio__item:focus {
