@@ -317,10 +317,20 @@ header {
     margin-bottom: 4em;
 }
 
+/* Modern Service Cards */
 .service {
-    max-width: 500px;
-    margin: 0 auto;
+    background: rgba(255,255,255,0.05);
+    padding: 2em;
+    border-radius: 12px;
+    backdrop-filter: blur(6px);
+    transition: transform 300ms ease, box-shadow 300ms ease;
 }
+
+.service:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.3);
+}
+
 
 @media (min-width: 800px) {
     .services {
