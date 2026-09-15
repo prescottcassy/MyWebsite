@@ -147,18 +147,21 @@ header {
     max-width: 90px;
 }
 
+/* Modern Glass Navigation Upgrade */
 .nav {
-    position: fixed;
-    background: var(--clr-dark);
-    color: var(--clr-light);
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
+    background: rgba(48, 48, 48, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
 
-    transform: translateX(100%);
-    transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
+.nav__link {
+    transition: color 200ms ease, transform 200ms ease;
+}
+
+.nav__link:hover {
+    color: var(--clr-accent);
+    transform: translateY(-3px);
 }
 
 .nav__list {
@@ -172,17 +175,6 @@ header {
     padding: 0;
 
 }
- 
- .nav__link{
-    color: inherit;
-    font-weight: var(--fw-bold);
-    font-size: var(--fs-h2);
-    text-decoration: none;
- }
-
- .nav__link:hover{
-     color: var(--clr-accent);
- }
 
  .nav-toggle {
      padding: .5em;
